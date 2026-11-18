@@ -1,6 +1,7 @@
 
 import express from "express";
 import dotenv from "dotenv";
+import path from "path";
 
 dotenv.config();
 
@@ -9,6 +10,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static("public"));
+
+// Homepage route
+app.get("/", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "public", "index.html"));
+});
 
 app.post("/api/rewrite", async (req, res) => {
     try {
