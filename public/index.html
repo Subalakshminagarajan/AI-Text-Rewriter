@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Rewriter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Text Rewriter</h1>
+            <p>Rewrite your text with the power of AI</p>
+        </header>
+
+        <main>
+            <label for="inputText">Enter your text</label>
+            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+
+            <label for="tone">Choose writing tone</label>
+            <select id="tone">
+                <option value="Professional">Professional</option>
+                <option value="Formal">Formal</option>
+                <option value="Friendly">Friendly</option>
+                <option value="Simple">Simple</option>
+            </select>
+
+            <button id="rewriteBtn" onclick="rewriteText()">Rewrite My Text</button>
+
+            <div id="loading" class="hidden">Rewriting your text...</div>
+
+            <div class="output-section">
+                <label>Rewritten Text</label>
+                <div id="outputText">Your rewritten text will appear here...</div>
+                <button id="copyBtn" onclick="copyText()">Copy Text</button>
+            </div>
+
+            <p class="notice">
+                Responsible AI: Avoid entering confidential information.
+                Always review AI-generated content before using it.
+            </p>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
